@@ -1,3 +1,41 @@
 .header {
     font-style: italic;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.picture {
+    border-style: dashed;
+    border-color: red;
+}
+
+.div-pic{
+    text-align: center;
+}
+
+.head2 {
+    font-style: italic;
+    font-weight: bold;
+    color: red;
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 0 0 0 3%;
+}
+
+.bg {
+    border-style: solid;
+    background-color: white;
+    margin: 0px 20% 5% 20%;
+}
+
+body {
+    background-color: red;
+}
+
+p {
+    margin: 0 0 0 3%;
+}
+
+ul {
+    margin: 0 0 0 3%;
 }
