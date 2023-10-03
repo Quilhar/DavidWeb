@@ -1,0 +1,61 @@
+.flex-container {
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(0, 183, 255);
+    align-items: center;
+}
+
+.box-prob-one{
+    width: 50px;
+    height: 75px;
+    text-align: center;
+    background-color: blue;
+    font-size: xx-large;
+    color: white;
+    margin: 5px 10px;
+    
+}
+
+.one {
+    height: 50px;
+    width: 50px;
+    margin-top: 15px;
+}
+
+.two {
+    width: 40px;
+    height: 40px;
+    
+}
+
+.three {
+    width: 80px;
+    height: 60px;
+    
+}
+
+.four {
+    width: 25px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.container {
+    justify-content: space-between;
+    border: 2px solid black;
+    display: flex;
+}
+
+.subcontainer {
+    border: 2px solid black;
+    display: flex;
+}
+
+.box-1 {
+    height: 100 px;
+    width: 50;
+    border: 5px solid black;
+}
+
+
