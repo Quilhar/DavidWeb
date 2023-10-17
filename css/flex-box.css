@@ -17,45 +17,211 @@
     
 }
 
-.one {
+.aone {
     height: 50px;
     width: 50px;
     margin-top: 15px;
 }
 
-.two {
+.atwo {
     width: 40px;
     height: 40px;
     
 }
 
-.three {
+.athree {
     width: 80px;
     height: 60px;
     
 }
 
-.four {
+.afour {
     width: 25px;
     height: 80px;
     margin-bottom: 15px;
 }
-
+/*  */
 .container {
     justify-content: space-between;
     border: 2px solid black;
     display: flex;
-}
-
-.subcontainer {
-    border: 2px solid black;
-    display: flex;
-}
-
-.box-1 {
-    height: 100 px;
-    width: 50;
     
 }
 
+.box-prob-two {
+    width: 50px;
+    height: 100px;
+    font-size: xx-large;
+    margin: 5px 5px 2px 5px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
 
+.subcontainer {
+    border: 2px solid rgb(202, 20, 20);
+    align-items: center;
+    display: flex;
+    margin: 10px 10px;
+}
+
+.bone {
+    height: auto;
+    width: 45px;
+    background-color: rgb(194, 60, 60);
+    margin-bottom: 5px;
+    text-align: center;
+
+}
+
+.btwo {
+    height: 70px;
+    width: 45px;
+    background-color: rgb(160, 101, 97);
+}
+
+.bthree {
+    height: 70px;
+    width: 45px;
+    background-color: rgb(161, 218, 114);
+}
+/*  */
+.sec_container {
+    border: 2px solid rgb(202, 20, 20);
+    margin: 10px 30%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.subcontainer_two {
+    border: 2px solid rgb(202, 20, 20);
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0 10px 0;
+}
+
+.bfour {
+    height: 70px;
+    width: 50px;
+    background-color: rgb(79, 170, 91);
+    margin: 5px 5px 2px 5px;
+}
+
+.bfive {
+    height: 70px;
+    width: auto;
+    background-color: rgb(101, 58, 151);
+    margin-bottom: 5px;
+}
+
+.subcontainer_three {
+    border: 2px solid rgb(202, 20, 20);
+    display: flex;
+    flex-direction: column;
+}
+
+.bsix {
+    height: 70px;
+    width: 50px;
+    background-color: rgb(214, 36, 36);
+    margin: 5px 5px 2px 5px;
+}
+
+.bseven {
+    height: 70px;
+    width: auto;
+    background-color: rgb(193, 182, 206);
+    margin-bottom: 5px;
+}
+
+/*  */
+
+.third_container {
+    border: 2px solid rgb(202, 20, 20);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.beight {
+    height: 70px;
+    width: 50px;
+    background-color: rgb(41, 126, 45);
+    margin-right: 5px;
+}
+
+.subcontainer_four {
+    border: 2px solid rgb(202, 20, 20);
+    display: flex;
+    flex-direction: column;
+    margin: 10px 5px 10px 0;
+}
+
+.bnine {
+    height: 70px;
+    width: 60px;
+    background-color: rgb(219, 78, 238);
+    margin: 5px 5px 3px 5px;
+}
+
+.bten {
+    height: 70px;
+    width: 60px;
+    background-color: rgb(181, 157, 184);
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+/*  */
+
+.prob_three_con {
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.top_con {
+    height: 100px;
+    width: auto;
+    background-color: lawngreen;
+}
+
+.header_box {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.middle_con {
+    height: 300px;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.article_box {
+    height: auto;
+    width: 60%;
+    margin-top: 10px;
+    margin-left: 10px;
+    background-color: whitesmoke;
+}
+
+.aside_box {
+    height: auto;
+    width: 20%;
+    margin-top: 10px;
+    margin-left: 10px;
+    background-color: wheat;
+}
+
+.nav_box {
+    height: auto;
+    width: 20%;
+    margin-top: 10px;
+    margin-left: 10px;
+    background-color: b;
+}
