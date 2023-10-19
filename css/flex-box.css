@@ -213,15 +213,41 @@
 .aside_box {
     height: auto;
     width: 20%;
-    margin-top: 10px;
     margin-left: 10px;
+    margin-right: 0px;
     background-color: wheat;
 }
 
 .nav_box {
     height: auto;
     width: 20%;
+    
+    margin-right: 0px;
+    background-color: rgb(161, 218, 114);
+}
+
+.article_text {
+    margin-top: 5px;
+    margin-left: 3px;
+}
+
+.aside_text {
     margin-top: 10px;
     margin-left: 10px;
-    background-color: b;
+}
+
+.nav_text {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.bot_con {
+    height: 100px;
+    width: auto;
+    background-color: lawngreen;
+}
+
+.footer_box {
+    margin-top: 10px;
+    margin-left: 10px;
 }
