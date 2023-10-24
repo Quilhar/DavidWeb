@@ -255,10 +255,12 @@
     border: 2px solid black;
     display: flex;
     flex-direction: row;
+    height: 500px;
+    width: auto;
 }
 
 .nav_con {
-    height: 500px;
+    height: 100%;
     width: 20%;
     background-color: rgb(161, 218, 114);
 }
@@ -287,10 +289,47 @@
 }
 
 .int_con {
-    width: 100%;
     height: 80%;
+    width: 100%;
     display: flex;
-    flex-direction: row;    
+    flex-direction: row;   
 }
 
-.
+.art_foot {
+    width: 80%;
+    display: flex;   
+    flex-direction: column;
+}
+
+.article_box2 {
+    width: auto;
+    height: 80%;
+    background-color: whitesmoke;
+}
+
+.article_text2 {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.footer_box2 {
+    height: 20%;
+    width: auto;
+    background-color: lawngreen;
+}
+
+.footer_text2 {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.aside_box2 {
+    background-color: wheat;
+    width: 20%;
+    height: auto;
+}
+
+.aside_text2 {
+    margin-top: 10px;
+    margin-left: 10px;
+}
