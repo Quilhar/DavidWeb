@@ -42,6 +42,10 @@
 // 8. decide who wins and update result (new function)
 // 9. Next steps?
 
+
+// the DOM: the document object model
+// givving varibles to different elements
+
 const rockButton = document.getElementById('rock')
 const paperButton = document.getElementById('paper')
 const scissorsButton = document.getElementById('scissors')
@@ -49,18 +53,46 @@ const result = document.querySelector('.result')
 const userImg = document.querySelector('.user-img')
 const compImg = document.querySelector('.comp-img')
 
-function rockBtnClick() {
-    console.log('rock clicked')
+const choices = ["rock", "paper", "scissors"]
+let comp
+
+// function rockBtnClick() {
+//     // to change the text of the result object
+//     result.innerText = 'Rock Clicked'
+// }
+
+// function paperBtnClick() {
+//     result.innerText = 'Paper Clicked' 
+// }
+
+// function scissorsBtnClick() {
+//     result.innerText = 'Scissors Clicked' 
+// }
+
+// adding the function to a button to occur when a certain action happens
+rockButton.addEventListener('click', () => {
+    userImg.src = "../img/rps_imgs/" + rockButton.id + ".png"
+    // result.style.backroundColor = "red" (Changing an objects styles by using .style. followed by the style)
+    compChoice()
+})
+paperButton.addEventListener('click', () => {
+    userImg.src = "../img/rps_imgs/" + paperButton.id + ".png"
+    compChoice()
+})
+scissorsButton.addEventListener('click', () => {
+    userImg.src = "../img/rps_imgs/" + scissorsButton.id + ".png"
+    compChoice()
+})
+
+// getting a random number to decide the index for the computer choice
+function compChoice () {
+    const randNum = Math.floor(Math.random()*3)
+    comp = choices[randNum]
+    compImg.src = "../img/rps_imgs/" + comp + ".png"
 }
 
-function paperBtnClick() {
-    console.log('paper clicked')
+function winLose(userChoice) {
+    console.log(comp, userChoice)
 }
 
-function scissorsBtnClick() {
-    console.log('scissors clicked')
-}
-
-rockButton.addEventListener('click', rockBtnClick)
-paperButton.addEventListener('click', paperBtnClick)
-scissorsButton.addEventListener('click', scissorsBtnClick)
+winLose(rock)
