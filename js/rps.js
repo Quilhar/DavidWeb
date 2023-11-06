@@ -52,9 +52,11 @@ const scissorsButton = document.getElementById('scissors')
 const result = document.querySelector('.result')
 const userImg = document.querySelector('.user-img')
 const compImg = document.querySelector('.comp-img')
+const  = document.querySelector('.result')
 
 const choices = ["rock", "paper", "scissors"]
 let comp
+let userScore = 0
 
 // function rockBtnClick() {
 //     // to change the text of the result object
@@ -74,14 +76,19 @@ rockButton.addEventListener('click', () => {
     userImg.src = "../img/rps_imgs/" + rockButton.id + ".png"
     // result.style.backroundColor = "red" (Changing an objects styles by using .style. followed by the style)
     compChoice()
+    winLose(rockButton.id)
+    userScore = userScore + 1
+    .innertext = userScore.toString ()
 })
 paperButton.addEventListener('click', () => {
     userImg.src = "../img/rps_imgs/" + paperButton.id + ".png"
     compChoice()
+    winLose(paperButton.id)
 })
 scissorsButton.addEventListener('click', () => {
     userImg.src = "../img/rps_imgs/" + scissorsButton.id + ".png"
     compChoice()
+    winLose(scissorsButton.id)
 })
 
 // getting a random number to decide the index for the computer choice
@@ -92,7 +99,24 @@ function compChoice () {
 }
 
 function winLose(userChoice) {
-    console.log(comp, userChoice)
+    if (userChoice == "rock" && comp == "paper") {
+        result.innerText = "Computer Wins"
+    } else if (userChoice == "scissors" && comp == "rock") {
+       result.innerText = "Computer Wins"
+    } else if (userChoice == "paper" && comp == "scissors") {
+        result.innerText = "Computer Wins"
+    } else if (comp == "scissors" && userChoice == "rock") {
+        result.innerText = "User Wins"
+    } else if (comp == "paper" && userChoice == "scissors") {
+        result.innerText = "User Wins"
+    } else if (comp == "scissors" && userChoice == "rock") {
+        result.innerText = "User Wins"  
+    } else {
+        result.innerText = "Tie"
+    }
 }
 
-winLose(rock)
+function scoreTracker() {
+ 
+
+}

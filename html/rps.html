@@ -29,15 +29,23 @@
     </header>
 
     <main>
+
         <h1>Rock, Paper, Scissors</h1>
+        <div class="wins">
+            <p class="user-wins">User Wins = <span class="user-wins-num">0</span></p>
+            <p class="comp-wins">Computer Wins = <span class="comp-wins-num">0</span></p>
+        </div>
+        
         <div class="choice-container">  
             <div class="user-frame">
                 <h2>User Choice</h2>
                 <img src="../img/rps_imgs/rps4.png" class='user-img' alt="rps">
+                <p>User Score = <span class="user-score">0</span></p>
             </div>
             <div class="computer-frame">
                 <h2>Computer Choice</h2>
                 <img src="../img/rps_imgs/rps4.png" class='comp-img' alt="rps">
+                <p>Computer Score = <span class="comp-score">0</span></p>
             </div>
         </div>
         
@@ -48,6 +56,12 @@
             <button id="paper">Paper</button>
             <button id="scissors">Scissors</button>
         </div>
+
+        <div> 
+            <button id = "newgame">New Game</button>
+        </div>
+
+
     </main>
     
     <footer class="footer_box">
