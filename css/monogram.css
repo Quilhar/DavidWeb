@@ -1,3 +1,55 @@
-p {
-    color: blue;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.hero-section {
+    height: 100vh;
+    background-image: url(../img/monogram_imgs/console\ bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px solid black;
+}
+
+header {
+    position: sticky;
+    top: 50px;
+    width: 90%;
+    max-width: 1800;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a2456;
+    color: #ff8b68;
+}
+
+.header-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left p {
+    /* clamp(min, grow, max) */
+    font-size: clamp(.5rem, 3vw, 1.5rem);
+    margin-left: .25em;
+    text-transform: uppercase;
+}
+
+.header-left i {
+    font-size: clamp(2rem, 5.5vw, 3rem);
+}
+
+nav a {
+    font-size: clamp(.25rem, 2vw, 1rem);
+    margin-left: .5em;
+    color: #ff8b68;
+    text-transform: uppercase;
 }

@@ -73,3 +73,17 @@ button {
 .header-con {
     display: none;
 }
+
+@media (max-width: 800px) {
+    img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 1000px) {
+    img {
+        width: 200px;
+        height: 200px;
+    }
+}
