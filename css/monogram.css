@@ -9,20 +9,22 @@ a {
 }
 
 .hero-section {
-    height: 100vh;
+
     background-image: url(../img/monogram_imgs/console\ bg.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    border: 2px solid black;
+    padding-top: 1em;
+    padding-bottom: 15em;
+    
 }
 
 header {
-    position: sticky;
-    top: 50px;
     width: 90%;
-    max-width: 1800;
+    max-width: 1800px;
     margin: 0 auto;
+    margin-bottom: 10em;
+    padding: 1em .5em;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -52,4 +54,78 @@ nav a {
     margin-left: .5em;
     color: #ff8b68;
     text-transform: uppercase;
+}
+
+.hero {
+    width: 90%;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    color: #ff8b68;
+    text-transform: uppercase;
+
+}
+
+.hero p {
+    width: 70%;
+    margin: 1rem auto;
+    text-align: center;
+    color: #ff8b68;
+    font-size: clamp(1.15rem, 1vw, 3rem);
+}
+
+.products {
+    width: 90%;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 1em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    background-color: #f0efed;
+}
+
+.product {
+    width: 100%;
+}
+
+.product img {
+    width: 100%;
+    height: 35vh;
+}
+
+.item {
+    margin: .5em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-name {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.item-descrption {
+    margin: .25em 0;
+}
+
+footer {
+    padding-left: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-between;
+}
+
+.footer-col {
+    width: 50%;
+    margin: .5em 0;
 }
