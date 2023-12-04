@@ -122,3 +122,77 @@ header nav button {
 .hero form input:hover {    
     border-color: #4C5FD5;
 }
+
+.categories {
+    width: 80%;
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    background-color: #f0efed;
+}
+
+.category {
+    width: clamp(25em, 39%, 60em);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: space-between;
+    font-family: 'GT America Standard', sans-serif;
+}
+
+img {
+    display: inline-block;
+    width: 7.5vw;
+    height: 7.5vw;
+    aspect-ratio: 1/1;
+    padding: 0 1em;
+}
+
+.text {
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.category-name {
+    font-weight: bold;
+    margin-bottom: 2vh;
+}
+
+.category-item-description {
+    margin-bottom: 2vh;
+}
+
+.learn-more {
+    color: #4C5FD5;
+    font-size: 20px;
+}
+
+.col-container {
+    padding-left: 5vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+footer {
+    background-color: black;
+    width: 100%;
+}
+
+.footer-col {
+    width: 50%;
+    margin: .5em 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    
+}
+
