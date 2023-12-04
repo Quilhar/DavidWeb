@@ -185,14 +185,60 @@ img {
 footer {
     background-color: black;
     width: 100%;
+    align-items: baseline;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+
 }
 
 .footer-col {
-    width: 50%;
+    width: 100%;
     margin: .5em 0;
     color: white;
     display: flex;
     flex-direction: column;
-    
 }
 
+h3 {
+    font-size: 24px;
+    font-family: 'GT America Standard', sans-serif;
+    margin-bottom: 2vh;
+}
+
+.footer-col a {
+    margin-bottom: 1vh; 
+    font-family: 'GT America Standard', sans-serif;
+}
+
+.footer-col a:hover {
+    text-decoration: underline;
+   
+}
+
+.footer-col p {
+    margin-top: 2.5vh;
+    margin-bottom: .5vh;
+    font-size: 20px;
+}
+
+.copy-col {
+    display: flex;
+    color: white;
+    flex-direction: column;
+    font-size: 20px;
+    font-family: 'GT America Standard', sans-serif;
+    align-items: flex-end;
+}
+
+.copy-col i {
+    margin-bottom: 2vh;
+}
+
+.copy-col p {
+    margin-bottom: .75vh;
+}
+
+.inner-copy-col {
+    margin-right: 5em;
+}
