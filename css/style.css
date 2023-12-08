@@ -47,11 +47,42 @@
 }
 
 
-
 .logo {
     margin-right: 20px;
     
 }
+
+main {
+    height: 72vh;
+}
+
+form {
+    width: 90%;
+    margin: 3em auto;
+
+}
+
+.full-name {
+    display: flex;
+    flex-direction: row;
+}
+
+.full-name label {
+    display: block;
+}
+
+.full-name input {
+    margin-right: 3em;
+}
+
+.full-name p {
+    margin-right: 4em;
+}
+
+.required {
+    color: red;
+}
+
 
 .footer_center {
     text-align: center;
