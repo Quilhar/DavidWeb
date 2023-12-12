@@ -56,33 +56,6 @@ main {
     height: 72vh;
 }
 
-form {
-    width: 90%;
-    margin: 3em auto;
-
-}
-
-.full-name {
-    display: flex;
-    flex-direction: row;
-}
-
-.full-name label {
-    display: block;
-}
-
-.full-name input {
-    margin-right: 3em;
-}
-
-.full-name p {
-    margin-right: 4em;
-}
-
-.required {
-    color: red;
-}
-
 
 .footer_center {
     text-align: center;
@@ -91,3 +64,59 @@ form {
 
 }
 
+form {
+    width: 90%;
+    margin: 3em auto;
+
+}
+
+form p {
+    width: 20%;
+}
+
+form label {
+    display: block;
+}
+
+.full-name {
+    display: flex;
+    flex-direction: row;
+}
+
+.full-name input {
+    margin-right: 3em;
+}
+
+.required {
+    color: red;
+}
+
+.address {
+    display: flex;
+    flex-direction: row;
+}
+
+.city-state {
+    display: flex;
+    flex-direction: row;
+}
+
+.zip-country {
+    display: flex;
+    flex-direction: row;
+}
+
+.email {
+    display: flex;
+    flex-direction: row;
+}
+
+.phone {
+    display: flex;
+    flex-direction: row;
+}
+
+.apply {
+    display: flex;
+    flex-direction: row;
+}
