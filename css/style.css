@@ -65,9 +65,14 @@ main {
 }
 
 form {
-    width: 90%;
+    width: 100%;
+
     margin: 3em auto;
 
+}
+
+form input {
+    margin-right: 1rem;
 }
 
 form p {
@@ -81,10 +86,11 @@ form label {
 .full-name {
     display: flex;
     flex-direction: row;
+    margin-bottom: 1.5vh;
 }
 
 .full-name input {
-    margin-right: 3em;
+    margin-right: 1em;
 }
 
 .required {
@@ -94,6 +100,7 @@ form label {
 .address {
     display: flex;
     flex-direction: row;
+    margin-bottom: 1.5vh;
 }
 
 .city-state {
@@ -104,19 +111,59 @@ form label {
 .zip-country {
     display: flex;
     flex-direction: row;
+    margin-bottom: 1.5vh;
 }
 
 .email {
     display: flex;
     flex-direction: row;
+    margin-bottom: 2vh;
 }
 
 .phone {
     display: flex;
     flex-direction: row;
+    margin-bottom: 1.5vh;
 }
 
 .apply {
     display: flex;
     flex-direction: row;
+    margin-bottom: 1.5vh;
+}
+
+.start-date {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1.5vh;
+}
+
+.upload-res {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1.5vh;
+}
+
+.take-photo {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1.5vh;
+}
+
+.terms-condi {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1.5vh
+}
+
+
+.address label {
+    margin-bottom: .25vh;
+}
+
+.sumbit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
