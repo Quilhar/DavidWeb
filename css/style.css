@@ -53,7 +53,7 @@
 }
 
 main {
-    height: 72vh;
+    height: 60%;
 }
 
 
@@ -100,7 +100,7 @@ form label {
 .address {
     display: flex;
     flex-direction: row;
-    margin-bottom: 1.5vh;
+    margin-bottom: 2vh;
 }
 
 .city-state {
@@ -111,7 +111,7 @@ form label {
 .zip-country {
     display: flex;
     flex-direction: row;
-    margin-bottom: 1.5vh;
+    margin-bottom: 2vh;
 }
 
 .email {
@@ -123,47 +123,59 @@ form label {
 .phone {
     display: flex;
     flex-direction: row;
-    margin-bottom: 1.5vh;
+    margin-bottom: 2vh;
 }
 
 .apply {
     display: flex;
     flex-direction: row;
-    margin-bottom: 1.5vh;
+    margin-bottom: 2vh;
 }
 
 .start-date {
     display: flex;
     flex-direction: row;
-    margin-bottom: 1.5vh;
+    margin-bottom: 2vh;
 }
 
 .upload-res {
     display: flex;
     flex-direction: row;
-    margin-bottom: 1.5vh;
+    margin-bottom: 2vh;
 }
 
 .take-photo {
     display: flex;
     flex-direction: row;
-    margin-bottom: 1.5vh;
+    margin-bottom: 2vh;
 }
 
 .terms-condi {
     display: flex;
     flex-direction: row;
-    margin-bottom: 1.5vh
+    margin-bottom: 2vh
 }
 
+.terms-condi label a {
+    color: aqua;
+    text-decoration: none;
+}
 
 .address label {
     margin-bottom: .25vh;
 }
 
-.sumbit {
+.photo input {
+    width: 20em;
+    height: 2em;
+}
+
+.submit {
     display: flex;
-    align-items: center;
     justify-content: center;
-    text-align: center;
+}
+
+.submit input {
+    width: 5em;
+    height: 2em;
 }
