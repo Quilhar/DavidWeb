@@ -52,16 +52,41 @@
     
 }
 
-main {
-    height: 60%;
+/* main {
+    height: 72vh;
+} */
+
+.card {
+    position: absolute;
+    top: 2vw;
+    right: 2vw;
+    height: 50px;
+    width: 50px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, .3);
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.top {
+    position: relative;
+    height: 200px;
+    width: 400px;
+
+}
+
+.bottom {
+    height: 200px;
+    width: 400px;
+    background-color: #fff5f5;
+}
 
 .footer_center {
     text-align: center;
     display: flex;
     flex-direction: row;
-
 }
 
 form {
