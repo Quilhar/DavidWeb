@@ -56,32 +56,7 @@
     height: 72vh;
 } */
 
-.card {
-    position: absolute;
-    top: 2vw;
-    right: 2vw;
-    height: 50px;
-    width: 50px;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, .3);
-    background-color: white;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.top {
-    position: relative;
-    height: 200px;
-    width: 400px;
-
-}
-
-.bottom {
-    height: 200px;
-    width: 400px;
-    background-color: #fff5f5;
-}
 
 .footer_center {
     text-align: center;
@@ -204,3 +179,58 @@ form label {
     width: 5em;
     height: 2em;
 }
+
+.faq-chall {
+    position: relative;
+
+}
+
+.top {
+    position: relative;
+    height: 30vh;
+    background-color: black;
+    background-image: url(/DavidWeb/img/background-pattern-mobile.svg);
+}
+
+.bottom {
+    position: relative;
+    height: 70vh;
+    background-color:  #f7daeb;
+}
+
+.card {
+    position: absolute;
+    height: 60vh;
+    width: 75vw;
+    left: 12vw;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+.card-title {
+    display: flex;
+    margin-top: 2vh;
+}
+
+.card-title img {
+    margin: 0 4vw;
+    
+}
+
+.faq-text button {
+    border: transparent;
+}
+
+.faq-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.faq-text p {
+    margin-left: 5vw;
+    margin-top: 2vh;
+}
+
