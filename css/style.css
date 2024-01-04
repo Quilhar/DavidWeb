@@ -208,6 +208,7 @@ form label {
     display: flex;
     flex-direction: column;
     z-index: 1;
+
 }
 .card-title {
     display: flex;

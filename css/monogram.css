@@ -102,12 +102,39 @@ nav a {
     flex-direction: column;
     justify-content: flex-start;
     align-items: space-between;
+    position: relative;
+    cursor: pointer;
 }
 
 .product img {
     display: inline-block;
     aspect-ratio: 1/1;
 }
+
+.pre-order-btn, .shop-btn {
+    text-transform: uppercase;
+    padding: .4rem .7rem;
+    font-size: .8rem;
+    font-weight: bold;
+    letter-spacing: .1rem;
+}
+
+.pre-order-btn {
+    background-color: #ff8b68;
+    position: absolute;
+    top: 20px;
+    right: 0;
+}
+
+.shop-btn {
+    background-color: #1a2456;
+    color: white;
+    border-radius: 20px;
+    display: none;
+}
+
+
+
 
 .item {
     margin: .5em 0;
