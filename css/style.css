@@ -186,20 +186,19 @@ form label {
 }
 
 .top {
-    position: relative;
     height: 30vh;
     background-color: black;
     background-image: url(/DavidWeb/img/background-pattern-mobile.svg);
 }
 
 .bottom {
-    position: relative;
     height: 70vh;
     background-color:  #f7daeb;
 }
 
 .card {
     position: absolute;
+    top: 25vh;
     height: 60vh;
     width: 75vw;
     left: 12vw;
@@ -208,11 +207,12 @@ form label {
     display: flex;
     flex-direction: column;
     z-index: 1;
-
 }
+
 .card-title {
     display: flex;
     margin-top: 2vh;
+    color: #221524;
 }
 
 .card-title img {
@@ -222,16 +222,38 @@ form label {
 
 .faq-text button {
     border: transparent;
+    background: transparent;
 }
 
 .faq-text {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
 }
 
 .faq-text p {
     margin-left: 5vw;
     margin-top: 2vh;
+    font-weight: bold;
+    color: #221524;
 }
 
+.answer {
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+    font-weight: bold;
+    color: #7a697d;
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+.minus {
+    display: none;
+}
