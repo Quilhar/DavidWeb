@@ -52,11 +52,6 @@
     
 }
 
-/* main {
-    height: 72vh;
-} */
-
-
 
 .footer_center {
     text-align: center;
@@ -86,7 +81,7 @@ form label {
 .full-name {
     display: flex;
     flex-direction: row;
-    margin-bottom: 1.5vh;
+    margin-bottom: 20px;
 }
 
 .full-name input {
@@ -100,7 +95,7 @@ form label {
 .address {
     display: flex;
     flex-direction: row;
-    margin-bottom: 2vh;
+    margin-bottom: 20px;
 }
 
 .city-state {
@@ -111,49 +106,49 @@ form label {
 .zip-country {
     display: flex;
     flex-direction: row;
-    margin-bottom: 2vh;
+    margin-bottom: 20px;
 }
 
 .email {
     display: flex;
     flex-direction: row;
-    margin-bottom: 2vh;
+    margin-bottom: 20px;
 }
 
 .phone {
     display: flex;
     flex-direction: row;
-    margin-bottom: 2vh;
+    margin-bottom: 20px;
 }
 
 .apply {
     display: flex;
     flex-direction: row;
-    margin-bottom: 2vh;
+    margin-bottom: 20px;
 }
 
 .start-date {
     display: flex;
     flex-direction: row;
-    margin-bottom: 2vh;
+    margin-bottom: 20px;
 }
 
 .upload-res {
     display: flex;
     flex-direction: row;
-    margin-bottom: 2vh;
+    margin-bottom: 20px;
 }
 
 .take-photo {
     display: flex;
     flex-direction: row;
-    margin-bottom: 2vh;
+    margin-bottom: 20px;
 }
 
 .terms-condi {
     display: flex;
     flex-direction: row;
-    margin-bottom: 2vh
+    margin-bottom: 20px;
 }
 
 .terms-condi label a {
@@ -162,7 +157,7 @@ form label {
 }
 
 .address label {
-    margin-bottom: .25vh;
+    margin-bottom: 5px;
 }
 
 .photo input {
@@ -186,20 +181,20 @@ form label {
 }
 
 .top {
-    height: 30vh;
+    height: 300px;
     background-color: black;
     background-image: url(/DavidWeb/img/background-pattern-mobile.svg);
 }
 
 .bottom {
-    height: 70vh;
+    height: 700px;
     background-color:  #f7daeb;
 }
 
 .card {
     position: absolute;
-    top: 25vh;
-    height: 60vh;
+    top: 200px;
+    height: 700px;
     width: 75vw;
     left: 12vw;
     background-color: white;
@@ -211,7 +206,7 @@ form label {
 
 .card-title {
     display: flex;
-    margin-top: 2vh;
+    margin-top: 20px;
     color: #221524;
 }
 
@@ -234,7 +229,7 @@ form label {
 
 .faq-text p {
     margin-left: 5vw;
-    margin-top: 2vh;
+    margin-top: 25px;
     font-weight: bold;
     color: #221524;
 }
@@ -292,8 +287,8 @@ form label {
         z-index: 1;
         background-color: white;
         border: 4px solid black;
-        width: 100%;
-        height: 25vh;
+        width: 97.5vw;
+        height: 250px;
         justify-content: center;
         align-items: center;
         flex-direction: column;
@@ -315,3 +310,8 @@ form label {
         font-size: 25px;
     }
 }
+
+.feature-con {
+    display: flex;
+}
+
