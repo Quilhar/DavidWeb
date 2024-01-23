@@ -1,0 +1,209 @@
+<div class="title">
+
+    <h1>Job Application</h1>
+    <p>Please complete the form below to apply for a position with us</p>
+
+    <hr>
+</div>
+
+
+<form>
+
+    <div class="full-name">
+
+        <p>Full Name <span class="required">*</span></p>
+        
+        <div class="first">
+
+            <input type="text" id="first-name" required>
+            <label for="first-name">First Name</label>
+
+        </div>
+
+        <div class="middle">
+
+            <input type="text" id="middle-name">
+            <label for="middle-name">Middle Name</label>
+
+        </div>
+
+        <div class="last">
+
+            <input type="text" id="last-name" required>
+            <label for="last-name">Last Name</label>
+
+        </div>
+
+
+    </div>
+    
+    <div class="address">  
+
+        <p>Current Address</p>
+
+        <div class="address-inner">
+
+            <div class="street">
+
+                <input type="text" id="street">
+                <label for="street">Street Address</label>
+
+            </div>
+
+            <div class="street-2">
+
+                <input type="text" id="street2">
+                <label for="street2">Street Address Line 2</label>
+
+            </div>
+
+            <div class="city-state">
+                <div class="city-box">
+
+                    <input type="text" id="city">     
+
+                    <label for="city">City</label>
+
+                </div>
+
+                <div class="state-box">
+
+                    <input type="text" id="state">
+
+                    <label for="state">State / Province</label>
+
+                </div>
+
+                
+            </div>
+
+            <div class="zip-country">
+
+                <div class="zip-box">
+                    <input type="text" id="zip">
+                    <label for="zip">Postal / Zip Code</label>
+
+                </div>
+
+                <div class="country-box">
+
+                    <select name="country" id="country">
+
+                        <option value="">Please Select</option>
+                        <option value="us">United States</option>
+                        <option value="cambodia">Cambodia</option>
+                        <option value="italy">Italy</option>
+                        <option value="argentina">Argentina</option>
+                        <option value="vietnam">Vietnam</option>
+
+                    </select>
+                    <label for="country">Country</label>
+
+                </div>
+
+
+            </div>
+       
+
+        </div>
+
+    </div>
+
+    <div class="email">
+
+        <p>Email Address <span class="required">*</span></p>
+        
+        <input type="text" id="email-txt" required placeholder="ex: myname@example.com">
+
+    </div>
+
+    <div class="phone">
+
+        <p>Phone Number</p>
+
+        <div class="area">
+
+            <input type="tel" id="area" name="area"/>
+            <label for="area">Area Code</label>
+
+        </div>
+
+        <div class="phone-num">
+
+            <input type="tel" id="phone-num" name="phone-num"/>
+            <label for="phone-num">Phone Number</label>
+
+        </div>
+
+    </div>
+
+    <div class="apply">
+
+        <p>Applying for Position <span class="required">*</span></p>
+
+        <select name="position" id="position">
+
+            <option value="">Please Select</option>
+            <option value="ui/ux-developer">UI/UX Developer</option>
+            <option value="front-end-developer">Front-End Developer</option>
+            <option value="back-end-developer">Back-End Developer</option>
+
+        </select>
+
+    </div>
+
+    <div class="start-date">
+        <p>Start Date</p>
+
+        <div class="date">
+
+            <input type="date" id="start"/>
+
+        </div>
+
+    </div>
+
+    <div class="upload-res">
+
+        <p>Upload Resume <span class="required">*</span></p>
+
+        <div class="res">
+
+            <input type="file" id="avatar"/>
+
+        </div>
+
+    </div>
+
+    <div class="take-photo">
+
+        <p>Take Photo</p>
+
+        <div class="photo">
+
+            <input type="button" value="Take a Photo" />
+
+        </div>
+
+
+    </div>
+
+    <div class="terms-condi">
+
+        <input type="checkbox" id="terms" name="terms" required/>
+        <label for="terms">I agree to the <a href="">terms & conditions</a><span class="required">*</span>.</label>
+
+    </div>
+
+    <div class="submit">
+
+        <div class="submit-button">
+
+            <input type="button" value="Submit" />
+
+        </div>
+
+
+    </div>
+        
+</form>

@@ -1,0 +1,115 @@
+form {
+    width: 100%;
+
+    margin: 3em auto;
+
+}
+
+form input {
+    margin-right: 1rem;
+}
+
+form p {
+    width: 20%;
+}
+
+form label {
+    display: block;
+}
+
+.full-name {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.full-name input {
+    margin-right: 1em;
+}
+
+.required {
+    color: red;
+}
+
+.address {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.city-state {
+    display: flex;
+    flex-direction: row;
+}
+
+.zip-country {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.email {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.phone {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.apply {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.start-date {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.upload-res {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.take-photo {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.terms-condi {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.terms-condi label a {
+    color: aqua;
+    text-decoration: none;
+}
+
+.address label {
+    margin-bottom: 5px;
+}
+
+.photo input {
+    width: 20em;
+    height: 2em;
+}
+
+.submit {
+    display: flex;
+    justify-content: center;
+}
+
+.submit input {
+    width: 5em;
+    height: 2em;
+}
