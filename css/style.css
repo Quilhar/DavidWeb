@@ -396,11 +396,17 @@ form {
     border-radius: 6px;
     margin-bottom: 1rem;
     box-shadow: 0 8px 8px rgba(0, 0, 255, .2);
+    border: none;
+}
+
+.free-trial:hover {
+    background-color: var(--neutral-grayish-blue);
+    color: var(--accent-blue);
 }
 
 .free-trial-txt-bold {
-    font-weight: bold;
-    color: white;
+    font-weight: 800;
+
 }
 
 .info {
@@ -433,13 +439,8 @@ form {
 .claim {
     display: flex;
     justify-content: center;
-    width: 100%;
-}
-
-.claim button{
-    display: flex;
+    width: 82%;
     height: 2.5rem;
-    width: 80%;
     border-radius: 6px;
     border: none;
     background-color: var(--primary-green);
@@ -448,6 +449,10 @@ form {
     text-align: center;
     align-items: center;
     justify-content: center;
+}
+
+.claim:hover {
+    background-color: var(--neutral-grayish-blue);
 }
 
 .terms-of-serv {
