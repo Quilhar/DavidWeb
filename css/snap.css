@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(129, 129, 129);
+}
+
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 5rem;
+    align-items: center;
+    font-size: 1.25em;
+    color: rgb(129, 129, 129);
+
+}
+
+header p {
+    margin-right: 1em;
+}
+
+header a {
+    margin-right: 1em;
+}
+
+.header-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.options-con {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.header-right {
+    display: flex;
+    margin-right: 2rem;
+    align-items: center;
+}
+
+.drop-title {
+    display: flex;
+    font-size: 1.25em;
+    color: rgb(129, 129, 129);
+}
+
+.title {
+    display: flex;
+    margin: 0 2rem 0 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.drop {
+    border: none;
+    margin-right: 2rem;
+}
+
+.header-right button {
+    border-radius: 15px;
+    height: 3rem;
+    width: 8em;
+    color: rgb(129, 129, 129);
+}
+
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 68rem;
+    position: relative;
+}
+
+.hero-right {
+    display: flex;
+    height: 80%;
+    width: auto;
+}
+
+.hero-left {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 50%;
+    margin-right: 8rem;
+    justify-content: left;
+    height: auto;
+}
+
+.hero-title {
+    font-size: 10rem;
+    font-weight: bold;
+}
+
+.hero-txt {
+    font-size: 3rem;
+    color: grey;
+    margin-top: 4rem;
+    display: flex;
+    width: 75%;
+}
+
+.learn-more {
+    margin-top: 4rem;
+}
+
+.learn-more button {
+    font-size: 1.5rem;
+    border-radius: 15px;
+    padding: 1.5rem;
+    width: 12.5rem;
+    color: white;
+    font-weight: bold;
+    background-color: black;
+}
+
+.sponsors {
+    margin-top: 8rem;
+}
+
+.options {
+    display: none;
+    box-shadow: 10px 5px 5px rgba(116, 116, 117, 0.2);
+    position: absolute;
+}
+
+.options:hover  {
+
+}
+
+.feature-op {
+    left: 10rem;
+}
+
+.company-op {
+    left: 18.5rem;
+}
