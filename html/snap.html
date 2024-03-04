@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/DavidWeb/css/snap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    
+    <button class="hamburger-icon"><i class="fa-solid fa-bars"></i></button>
     <header>
-
+        
+        
         <div class="header-left">
-
-            <div class="title"><img src="/DavidWeb/img/snap_imgs/logo.svg" alt=""></div>
-
+            
+            <div class="logo"><img src="/DavidWeb/img/snap_imgs/logo.svg" alt=""></div>
+            
             <div class="options-con">
 
                 <button class="drop feature">
@@ -54,56 +56,93 @@
 
     </header>
 
-    <div class="options feature-op">
-        <ul class="links">
-            <li><img src="/DavidWeb/img/snap_imgs/icon-todo.svg" alt=""><a href="">Todo List</a></li>
-            <li><img src="/DavidWeb/img/snap_imgs/icon-calendar.svg" alt=""><a href="">Calender</a></li>
-            <li><img src="/DavidWeb/img/snap_imgs/icon-reminders.svg" alt=""><a href="">Reminders</a></li>
-            <li><img src="/DavidWeb/img/snap_imgs/icon-planning.svg" alt=""><a href="">Planning</a></li>
-        </ul>
-    </div>
+    <div class="hamburger-con">
 
-    <div class="options company-op">
-        <ul class="links">
-            <li><a href="">History</a></li>
-            <li><a href="">Our Team</a></li>
-            <li><a href="">Blog</a></li>
-        </ul>
-    </div>
+        <button class="hamburger feature">
 
-    <!-- <div class="hero">
+            <div class="drop-title"> 
+                <p>Features</p>
+                <img src="/DavidWeb/img/snap_imgs/icon-arrow-down.svg" alt="">
+            </div>
+            
+        </button>                
 
-        <div class="hero-left">
+        <button class="hamburger company">
 
-
-            <div class="hero-title">
-                <p>Make remote work</p>
+            <div class="drop-title"> 
+                <p>Company</p>
+                <img src="/DavidWeb/img/snap_imgs/icon-arrow-down.svg" alt="">
             </div>
 
-            <div class="hero-txt">
-                <p>Get your team in sync, no matter your location. Streamline prcesses, create team, and watch productivity soar</p>
-            </div>
+        </button>                
 
-            <div class="learn-more">
-                <button>Learn More</button>
-            </div>
+        <a href="" class="career">Careers</a>
 
-            <div class="sponsors">
-                <img src="/DavidWeb/img/snap_imgs/client-databiz.svg" alt="">
-                <img src="/DavidWeb/img/snap_imgs/client-audiophile.svg" alt="">
-                <img src="/DavidWeb/img/snap_imgs/client-meet.svg" alt="">
-                <img src="/DavidWeb/img/snap_imgs/client-maker.svg" alt="">
-            </div>
+        <a href="" class = "about">About</a>
+
+        <div class="hamburger-bot">
+
+            <p>Login</p>
+
+            <button>Register</button>
 
         </div>
 
-        <div class="hero-right">
+    </div>
 
-            <img src="/DavidWeb/img/snap_imgs/image-hero-desktop.png" alt="">
+    <main>
 
-
+        <div class="options feature-op">
+            <ul class="links">
+                <li><img src="/DavidWeb/img/snap_imgs/icon-todo.svg" alt=""><a href="">Todo List</a></li>
+                <li><img src="/DavidWeb/img/snap_imgs/icon-calendar.svg" alt=""><a href="">Calender</a></li>
+                <li><img src="/DavidWeb/img/snap_imgs/icon-reminders.svg" alt=""><a href="">Reminders</a></li>
+                <li><img src="/DavidWeb/img/snap_imgs/icon-planning.svg" alt=""><a href="">Planning</a></li>
+            </ul>
         </div>
-    </div> -->
+    
+        <div class="options company-op">
+            <ul class="links">
+                <li><a href="">History</a></li>
+                <li><a href="">Our Team</a></li>
+                <li><a href="">Blog</a></li>
+            </ul>
+        </div>
+    
+        <div class="hero">
+    
+            <div class="hero-left">
+    
+    
+                <div class="hero-title">
+                    <p>Make remote work</p>
+                </div>
+    
+                <div class="hero-txt">
+                    <p>Get your team in sync, no matter your location. Streamline prcesses, create team, and watch productivity soar</p>
+                </div>
+    
+                <div class="learn-more">
+                    <button>Learn More</button>
+                </div>
+    
+                <div class="sponsors">
+                    <img src="/DavidWeb/img/snap_imgs/client-databiz.svg" alt="">
+                    <img src="/DavidWeb/img/snap_imgs/client-audiophile.svg" alt="">
+                    <img src="/DavidWeb/img/snap_imgs/client-meet.svg" alt="">
+                    <img src="/DavidWeb/img/snap_imgs/client-maker.svg" alt="">
+                </div>
+    
+            </div>
+    
+            <div class="hero-right">
+                <div class="mobile-img"><img src="/DavidWeb/img/snap_imgs/image-hero-mobile.png" alt=""></div>
+                <div class="desktop-img"><img src="/DavidWeb/img/snap_imgs/image-hero-desktop.png" alt=""></div>
+            </div>
+        </div>
+
+    </main>
+
 
 
 </body>

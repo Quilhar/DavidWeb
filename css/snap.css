@@ -3,6 +3,7 @@
     padding: 0;
 }
 
+
 a {
     text-decoration: none;
     color: rgb(129, 129, 129);
@@ -14,6 +15,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     height: 5rem;
+    width: 100%;
     align-items: center;
     font-size: 1.25em;
     color: rgb(129, 129, 129);
@@ -52,11 +54,12 @@ header a {
     color: rgb(129, 129, 129);
 }
 
-.title {
+.logo {
     display: flex;
     margin: 0 2rem 0 2rem;
     justify-content: center;
     align-items: center;
+
 }
 
 .drop {
@@ -71,38 +74,54 @@ header a {
     color: rgb(129, 129, 129);
 }
 
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .hero {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 68rem;
+    height: 65rem;
+    width: 80%;
     position: relative;
 }
 
 .hero-right {
     display: flex;
-    height: 80%;
+    flex-direction: row;
+    height: auto;
     width: auto;
+
+}
+
+.mobile-img {
+    display: none;
+}
+
+.desktop-img img{
+    height: 80vh;
 }
 
 .hero-left {
     display: flex;
     flex-direction: column;
     height: auto;
-    width: 50%;
+    width: auto;
     margin-right: 8rem;
-    justify-content: left;
-    height: auto;
+    
 }
 
 .hero-title {
-    font-size: 10rem;
+    font-size: 8rem;
     font-weight: bold;
+    margin-top: 8rem;
 }
 
 .hero-txt {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: grey;
     margin-top: 4rem;
     display: flex;
@@ -121,26 +140,166 @@ header a {
     color: white;
     font-weight: bold;
     background-color: black;
+    transition: all .2 ease .5;
+    border: none;
+}
+
+.learn-more button:hover  {
+    background-color: white;
+    color: black;
 }
 
 .sponsors {
-    margin-top: 8rem;
+    margin-top: 5rem;
+}
+
+.sponsors img {
+    width: 8rem;
 }
 
 .options {
     display: none;
     box-shadow: 10px 5px 5px rgba(116, 116, 117, 0.2);
     position: absolute;
+    /* transition: fade .2 ease .5 infinite; */
 }
 
-.options:hover  {
-
-}
 
 .feature-op {
     left: 10rem;
+    /* transition: fade .2 ease .5 infinite; */
 }
 
 .company-op {
     left: 18.5rem;
+    /* transition: fade .2 ease .5 infinite; */
+}
+
+/* @keyframes fade {
+    100% {
+        display: block;
+        transform: scaleY(.5);
+    }
+} */
+
+.hamburger-icon {
+    display: none;
+}
+
+.hamburger-con {
+    display: none;
+}
+
+@media (max-width: 375px){
+
+
+    header {
+        /* border: solid black 2px; */
+        width: 375px;
+        position: relative;
+    }
+
+    .logo {
+        margin-left: 1rem;
+        padding-top: .25rem;
+    }
+
+    .options-con{
+        display: none;
+    }
+
+    .header-right {
+        display: none;
+    }
+
+    .hamburger-icon {
+        display: block;
+        position: absolute;
+        left: 20.5rem;
+        top: 1.5rem;
+        border: none;
+    }
+
+    .hamburger-icon i {
+        font-size: 2rem;   
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        height: 80%;
+        width: 100%;
+    }   
+
+    .mobile-img {
+        display: block;
+        height: auto;
+        width: auto;
+    }
+
+    .desktop-img {
+        display: none;
+    }
+
+    .mobile-img img {
+        width: 23.5rem;
+    }
+    .hero-left {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: auto;
+        margin-right: 0;
+    }
+
+    .hero-right {
+        width: auto;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+        margin-top: 1rem;
+        width: auto;
+    }
+
+    .hero-txt {
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+
+    .sponsors {
+        display: flex;
+        flex-direction: row;
+        margin-top: 2rem;
+    }
+
+    .sponsors img {
+        height: 1rem;
+        width: auto;
+        margin-right: 1.5rem;
+    }
+
+    .learn-more {
+        margin-top: 1rem;
+    }
+
+    .learn-more button {
+        font-size: 1rem;
+        padding: 1rem;
+        width: 10rem;
+        border: none;
+        border-radius: 18px;
+    }
+
+    .hamburger-con {
+        display: flex;
+        flex-direction: column;
+        width: 65%;
+        position: absolute;
+    }
+
+    .hamburger-bot {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
