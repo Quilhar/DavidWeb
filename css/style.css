@@ -4,6 +4,8 @@
 
 }
 
+
+
 .header_box, .footer_box {
     justify-content: space-between;
     display: flex;
@@ -504,3 +506,29 @@ form {
 
     
 }
+
+.weather-con {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15rem;
+    height: fit-content;
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: rgb(12, 12, 117);
+    color: white;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.weather {
+    margin-right: 2rem;
+    margin-left: 1rem;
+}
+
+.city-output {
+    font-weight: bold;
+}
+

@@ -5,6 +5,8 @@ const hamburgerBtn = document.querySelector(".hamburger-button")
 const optionMenu = document.querySelector(".hamburger-con")
 const theJoke = document.querySelector(".output")
 const jokeBtn = document.querySelector(".button")
+const copyYear = document.querySelector(".copy-year")
+
 
 
 plusBtnList.forEach(element => {
@@ -66,3 +68,84 @@ hamburgerBtn.addEventListener('click', () => {
 //     getJoke()
 
 // })
+                            
+//                          Weather
+// ########################################################################
+
+const city = document.querySelector(".city-output")
+const dateTime = document.querySelector(".date-time")
+const weatherIcon = document.querySelector(".weather-img")
+const temp = document.querySelector(".temp-output")
+const weatherCondition = document.querySelector(".condition-output")
+const weatherKey = '127ced9ba1b98f8ddc63e6f82aec51f3'
+const clouds = ['few clouds','scattered clouds','broken clouds']
+const rain = ['shower rain','rain', 'mist']
+
+
+const dateObject = new Date()
+const month = dateObject.getMonth() + 1
+const date = dateObject.getDate()
+const year = dateObject.getFullYear()
+
+let hours = dateObject.getHours()
+let minutes = dateObject.getMinutes()
+let amPM = "AM"
+let lat = 43.6591
+let lon = -70.2568
+let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${weatherKey}&units=imperial`
+let img 
+
+async function getWeather() {
+    try {
+        const response = await fetch(url)
+        const data = await response.json()
+        temp.textContent = Math.round(data.main.temp)
+        city.textContent = data.name
+
+        let curCondition = data.weather[0].description
+        weatherCondition.textContent = curCondition
+
+        if (clouds.includes(curCondition)) {
+            img = "partly-cloudy.png"
+        } else if (rain.include(curCondition)) {
+            img = "rain.png"
+        } else if (curCondition == 'thunderstorm') {
+            img = "rain-storm.png"
+        } else if (curCondition == "snow") {
+            img = "snow.png"
+        } else if (curCondition == "clear sky") {
+            img = "sunny.png"
+        }
+
+
+        weatherIcon.src = `../DavidWeb/img/weather_imgs/${img}`
+        
+        console.log(data)
+    } catch (error) {
+        console.error(error)
+    }
+}
+
+getWeather()
+
+if (minutes < 10) {
+    minutes = '0' + minutes.toString()
+}
+
+if (hours >= 12) {
+    amPM = 'PM'
+}
+
+if (hours > 12) {
+    hours = hours - 12
+}
+
+
+let time = ` ${hours}:${minutes} ${amPM}`
+
+console.log(month, date, year, hours, minutes, time)
+
+city.textContent = "Portland, ME"
+dateTime.textContent = time
+weatherIcon.src = ''
+weatherCondition.textContent = "Cloudy"
