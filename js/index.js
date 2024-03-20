@@ -78,7 +78,7 @@ const weatherIcon = document.querySelector(".weather-img")
 const temp = document.querySelector(".temp-output")
 const weatherCondition = document.querySelector(".condition-output")
 const weatherKey = '127ced9ba1b98f8ddc63e6f82aec51f3'
-const clouds = ['few clouds','scattered clouds','broken clouds']
+const clouds = ['few clouds','scattered clouds','broken clouds', 'overcast clouds']
 const rain = ['shower rain','rain', 'mist']
 
 
@@ -94,20 +94,45 @@ let lat = 43.6591
 let lon = -70.2568
 let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${weatherKey}&units=imperial`
 let img 
+let curCity 
+
+const lonLatKey = '65e3ae9323d14c73bd9b88373bcdd36c'
+let lonLatUrl = `https://api.geoapify.com/v1/ipinfo?&apiKey=${lonLatKey}`
+
+async function getLocation() {
+    try {
+        const locationResponse = await fetch(lonLatUrl)
+        const locationData = await locationResponse.json()
+        
+        lat = locationData.location.latitude
+        lon = locationData.location.longitude
+        let curCity = locationData.city.name
+        let curState = locationData.state.name
+        
+        console.log(locationData.state.name)
+
+        
+    } catch (error) {
+        console.error(error)
+    }
+}
+
+getLocation()
 
 async function getWeather() {
     try {
-        const response = await fetch(url)
-        const data = await response.json()
-        temp.textContent = Math.round(data.main.temp)
-        city.textContent = data.name
+        const weatherResponse = await fetch(url)
+        const weatherData = await weatherResponse.json()
+        temp.textContent = Math.round(weatherData.main.temp)
+        city.textContent = weatherData.name
 
-        let curCondition = data.weather[0].description
+        let curCondition = "rain"//data.weather[0].description
         weatherCondition.textContent = curCondition
 
+        console.log(curCondition)
         if (clouds.includes(curCondition)) {
             img = "partly-cloudy.png"
-        } else if (rain.include(curCondition)) {
+        } else if (rain.includes(curCondition)) {
             img = "rain.png"
         } else if (curCondition == 'thunderstorm') {
             img = "rain-storm.png"
@@ -118,9 +143,10 @@ async function getWeather() {
         }
 
 
-        weatherIcon.src = `../DavidWeb/img/weather_imgs/${img}`
+        weatherIcon.src = `../img/weather_imgs/partly-cloudy.png`
+        // weatherIcon.textContent = "hello"
         
-        console.log(data)
+        console.log(weatherData)
     } catch (error) {
         console.error(error)
     }
