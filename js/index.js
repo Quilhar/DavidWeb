@@ -87,14 +87,14 @@ const month = dateObject.getMonth() + 1
 const date = dateObject.getDate()
 const year = dateObject.getFullYear()
 
+let lat
+let lon
 let hours = dateObject.getHours()
 let minutes = dateObject.getMinutes()
 let amPM = "AM"
-let lat = 43.6591
-let lon = -70.2568
-let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${weatherKey}&units=imperial`
-let img 
+let img
 let curCity 
+let curState
 
 const lonLatKey = '65e3ae9323d14c73bd9b88373bcdd36c'
 let lonLatUrl = `https://api.geoapify.com/v1/ipinfo?&apiKey=${lonLatKey}`
@@ -106,12 +106,16 @@ async function getLocation() {
         
         lat = locationData.location.latitude
         lon = locationData.location.longitude
-        let curCity = locationData.city.name
-        let curState = locationData.state.name
+        curCity = locationData.city.name
+        curState = locationData.state.name
         
-        console.log(locationData.state.name)
+        city.textContent = `${curCity}, ${curState}`
 
         
+        
+        console.log(lat, lon)
+
+
     } catch (error) {
         console.error(error)
     }
@@ -119,14 +123,19 @@ async function getLocation() {
 
 getLocation()
 
+console.log(lat, lon)
+
+let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${weatherKey}&units=imperial`
+
 async function getWeather() {
     try {
+
         const weatherResponse = await fetch(url)
         const weatherData = await weatherResponse.json()
         temp.textContent = Math.round(weatherData.main.temp)
-        city.textContent = weatherData.name
+        
 
-        let curCondition = "rain"//data.weather[0].description
+        let curCondition = data.weather[0].description
         weatherCondition.textContent = curCondition
 
         console.log(curCondition)
@@ -143,7 +152,7 @@ async function getWeather() {
         }
 
 
-        weatherIcon.src = `../img/weather_imgs/partly-cloudy.png`
+        weatherIcon.src = `../img/weather_imgs/${img}`
         // weatherIcon.textContent = "hello"
         
         console.log(weatherData)
@@ -153,6 +162,20 @@ async function getWeather() {
 }
 
 getWeather()
+
+
+const timeUrl = `https://api.api-ninjas.com/v1/worldtime?lat=${lat}&lon=${lon}`
+const options = {
+    method: 'GET',
+    headers: {
+        'X-RapidAPI-Key': 'o2RlrdpMNSHrVCW5750ZvQ==MJFpnNpLfmMO2p01',
+    }
+};
+
+
+
+
+
 
 if (minutes < 10) {
     minutes = '0' + minutes.toString()
@@ -171,7 +194,6 @@ let time = ` ${hours}:${minutes} ${amPM}`
 
 console.log(month, date, year, hours, minutes, time)
 
-city.textContent = "Portland, ME"
 dateTime.textContent = time
-weatherIcon.src = ''
-weatherCondition.textContent = "Cloudy"
+
+
