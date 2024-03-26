@@ -526,9 +526,15 @@ form {
 .weather {
     margin-right: 2rem;
     margin-left: 1rem;
+    display: flex;
+    width: auto;
+    height: auto;
 }
 
 .city-output {
     font-weight: bold;
 }
 
+.condition-output {
+    text-transform: capitalize;
+}

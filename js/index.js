@@ -79,20 +79,20 @@ const temp = document.querySelector(".temp-output")
 const weatherCondition = document.querySelector(".condition-output")
 const weatherKey = '127ced9ba1b98f8ddc63e6f82aec51f3'
 const clouds = ['few clouds','scattered clouds','broken clouds', 'overcast clouds']
-const rain = ['shower rain','rain', 'mist']
+const rain = ['shower rain','rain', 'mist', "light rain"]
 
 
-const dateObject = new Date()
-const month = dateObject.getMonth() + 1
-const date = dateObject.getDate()
-const year = dateObject.getFullYear()
+// const dateObject = new Date()
+// const month = dateObject.getMonth() + 1
+// const date = dateObject.getDate()
+// const year = dateObject.getFullYear()
 
-let lat
-let lon
-let hours = dateObject.getHours()
-let minutes = dateObject.getMinutes()
-let amPM = "AM"
-let img
+// let lat
+// let lon
+// let hours = dateObject.getHours()
+// let minutes = dateObject.getMinutes()
+let amPm = "AM"
+
 let curCity 
 let curState
 
@@ -111,9 +111,11 @@ async function getLocation() {
         
         city.textContent = `${curCity}, ${curState}`
 
-        
-        
-        console.log(lat, lon)
+        console.log(lat,lon)
+
+        const coords = [lat, lon]
+
+        return coords
 
 
     } catch (error) {
@@ -121,24 +123,22 @@ async function getLocation() {
     }
 }
 
-getLocation()
-
-console.log(lat, lon)
-
-let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${weatherKey}&units=imperial`
-
-async function getWeather() {
+async function getWeather(coords) {
+    const la = coords[0]
+    const lo = coords[1]
+    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${la}&lon=${lo}&appid=${weatherKey}&units=imperial`
+    let img
     try {
-
+        
         const weatherResponse = await fetch(url)
         const weatherData = await weatherResponse.json()
         temp.textContent = Math.round(weatherData.main.temp)
-        
 
-        let curCondition = data.weather[0].description
+        let curCondition = weatherData.weather[0].description
+        console.log(curCondition)
         weatherCondition.textContent = curCondition
 
-        console.log(curCondition)
+        
         if (clouds.includes(curCondition)) {
             img = "partly-cloudy.png"
         } else if (rain.includes(curCondition)) {
@@ -147,13 +147,13 @@ async function getWeather() {
             img = "rain-storm.png"
         } else if (curCondition == "snow") {
             img = "snow.png"
-        } else if (curCondition == "clear sky") {
+        } else {
             img = "sunny.png"
         }
 
 
         weatherIcon.src = `../img/weather_imgs/${img}`
-        // weatherIcon.textContent = "hello"
+        
         
         console.log(weatherData)
     } catch (error) {
@@ -161,39 +161,64 @@ async function getWeather() {
     }
 }
 
-getWeather()
 
-
-const timeUrl = `https://api.api-ninjas.com/v1/worldtime?lat=${lat}&lon=${lon}`
-const options = {
-    method: 'GET',
-    headers: {
-        'X-RapidAPI-Key': 'o2RlrdpMNSHrVCW5750ZvQ==MJFpnNpLfmMO2p01',
+async function getTime(coords) {
+    const la = coords[0]
+    const lo = coords[1]
+    const timeUrl = `https://api.api-ninjas.com/v1/worldtime?lat=${la}&lon=${lo}`
+    const options = {
+        
+        headers: {
+            'X-API-Key': 'o2RlrdpMNSHrVCW5750ZvQ==MJFpnNpLfmMO2p01',
+        }
     }
-};
 
+    try {
+        const timeResponse = await fetch(timeUrl, options)
+        const timeData = await timeResponse.json()
+        const hr = timeData.hour
+        const min = timeData.minute
+        const month = timeData.month
+        const day = timeData.day
+        const year = timeData.year
 
+        if (min < 10) {
+            min = '0' + minutes.toString()
+        }
+        
+        if (hr >= 12) {
+            amPm = 'PM'
+        }
+        
+        if (hr > 12) {
+            hr = hr - 12
+        }
 
+        dateTime.textContent = `${hr}:${min} ${amPm} ${month}/${day}/${year}`
 
+    }
 
-
-if (minutes < 10) {
-    minutes = '0' + minutes.toString()
+    catch (error) {
+        console.error(error)
+    }
 }
 
-if (hours >= 12) {
-    amPM = 'PM'
-}
+getLocation()
+    .then(c => getTime(c))
 
-if (hours > 12) {
-    hours = hours - 12
-}
+getLocation()
+    .then(c => getWeather(c))
 
 
-let time = ` ${hours}:${minutes} ${amPM}`
 
-console.log(month, date, year, hours, minutes, time)
 
-dateTime.textContent = time
+
+
+
+// let time = ` ${hours}:${minutes} ${amPM}`
+
+// console.log(month, date, year, hours, minutes, time)
+
+// dateTime.textContent = time
 
 
